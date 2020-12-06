@@ -4,6 +4,7 @@ import 'package:lawyer/app_theme/text_styles.dart';
 import 'package:lawyer/widgets/cases_card.dart';
 import 'package:lawyer/widgets/drawer.dart';
 import 'package:lawyer/widgets/floating_button.dart';
+import 'package:lawyer/widgets/unicorn_fab.dart';
 import 'package:unicorndial/unicorndial.dart';
 import 'package:lawyer/model/faqs_data.dart';
 
@@ -39,6 +40,7 @@ class FAQsPage extends StatelessWidget {
           ),
         ),
         drawer: MyDrawer(),
+        floatingActionButton: FAB(),
         // floatingActionButton: UnicornDialer(
         //   parentHeroTag: null,
         //   parentButtonBackground: Colors.blue,

@@ -5,6 +5,7 @@ import 'package:lawyer/app_theme/text_styles.dart';
 import 'package:lawyer/model/meeting_data.dart';
 import 'package:lawyer/widgets/drawer.dart';
 import 'package:lawyer/widgets/meeting_card.dart';
+import 'package:lawyer/widgets/unicorn_fab.dart';
 import 'package:provider/provider.dart';
 import 'package:unicorndial/unicorndial.dart';
 import 'package:lawyer/widgets/floating_button.dart';
@@ -28,8 +29,8 @@ class Schedules extends StatelessWidget {
 
     _controller.coloredDates = _coloredDates;
     return Scaffold(
+        floatingActionButton: FAB(),
         // floatingActionButton: UnicornDialer(
-        //   parentHeroTag: null,
         //   parentButtonBackground: Colors.blue,
         //   orientation: UnicornOrientation.VERTICAL,
         //   parentButton: Icon(Icons.add),

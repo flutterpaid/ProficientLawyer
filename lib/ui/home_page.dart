@@ -9,6 +9,7 @@ import 'package:lawyer/model/case_data.dart';
 import 'package:lawyer/widgets/floating_button.dart';
 import 'package:lawyer/widgets/meeting_list.dart';
 import 'package:lawyer/app_theme/screen_util-extension.dart';
+import 'package:lawyer/widgets/unicorn_fab.dart';
 import 'package:unicorndial/unicorndial.dart';
 
 class HomePage extends StatelessWidget {
@@ -119,13 +120,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      // floatingActionButton: UnicornDialer(
-      //   parentHeroTag: null,
-      //   parentButtonBackground: Colors.blue,
-      //   orientation: UnicornOrientation.VERTICAL,
-      //   parentButton: Icon(Icons.add),
-      //   childButtons: getProfileMenu(),
-      // ),
+      floatingActionButton: FAB(),
     );
   }
 }

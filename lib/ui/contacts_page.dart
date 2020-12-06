@@ -7,6 +7,7 @@ import 'package:lawyer/app_theme/text_styles.dart';
 import 'package:lawyer/widgets/contacts_grid.dart';
 import 'package:lawyer/widgets/contacts_list.dart';
 import 'package:lawyer/widgets/drawer.dart';
+import 'package:lawyer/widgets/unicorn_fab.dart';
 
 class ContactsPage extends StatelessWidget {
   static const id = "ContactsPage";
@@ -15,6 +16,7 @@ class ContactsPage extends StatelessWidget {
     ScreenUtil.init(context,
         designSize: Size(750, 1334), allowFontScaling: false);
     return Scaffold(
+      floatingActionButton: FAB(),
       drawer: MyDrawer(),
       appBar: AppBar(
         backgroundColor: AppColor.appbar,

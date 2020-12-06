@@ -7,6 +7,7 @@ import 'package:lawyer/ui/faqs_page.dart';
 import 'package:lawyer/ui/home_page.dart';
 import 'package:lawyer/ui/notes_page.dart';
 import 'package:lawyer/ui/schedule_page.dart';
+import 'package:path/path.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -46,7 +47,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text('Home'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, HomePage.id);
+              if (ModalRoute.of(context).settings.name != HomePage.id)
+                Navigator.pushReplacementNamed(context, HomePage.id);
+              else
+                Navigator.pop(context);
             },
           ),
           ListTile(
@@ -56,7 +60,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text('Scheduling'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, Schedules.id);
+              if (ModalRoute.of(context).settings.name != Schedules.id)
+                Navigator.pushReplacementNamed(context, Schedules.id);
+              else
+                Navigator.pop(context);
             },
           ),
           ListTile(
@@ -66,7 +73,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text('My Cases'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, CasePage.id);
+              if (ModalRoute.of(context).settings.name != CasePage.id)
+                Navigator.pushReplacementNamed(context, CasePage.id);
+              else
+                Navigator.pop(context);
             },
           ),
           ListTile(
@@ -76,7 +86,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text('Notes'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, NotesPage.id);
+              if (ModalRoute.of(context).settings.name != NotesPage.id)
+                Navigator.pushReplacementNamed(context, NotesPage.id);
+              else
+                Navigator.pop(context);
             },
           ),
           ListTile(
@@ -86,7 +99,10 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text('Contacts'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, ContactsPage.id);
+              if (ModalRoute.of(context).settings.name != CasePage.id)
+                Navigator.pushReplacementNamed(context, CasePage.id);
+              else
+                Navigator.pop(context);
             },
           ),
           ListTile(
@@ -107,7 +123,10 @@ class MyDrawer extends StatelessWidget {
             leading: Icon(Icons.event_note, color: AppColor.appbar),
             title: Text('FAQs'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, FAQsPage.id);
+              if (ModalRoute.of(context).settings.name != FAQsPage.id)
+                Navigator.pushReplacementNamed(context, FAQsPage.id);
+              else
+                Navigator.pop(context);
             },
           ),
         ],
