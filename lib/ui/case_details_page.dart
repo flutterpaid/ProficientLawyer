@@ -48,53 +48,21 @@ class CasePage extends StatelessWidget {
         //   parentButton: Icon(Icons.add),
         //   childButtons: getProfileMenu(),
         // ),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(18),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.blueAccent,
-                      borderRadius: BorderRadius.circular(130)),
-                  width: 130,
-                  height: 37,
-                  child: FlatButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.print,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            "Print Case List",
-                            style: AppTextStyles.textStyle(
-                                size: 10, color: Colors.white),
-                          ),
-                        ],
-                      )),
-                ),
-              ),
-              ListView.builder(
-                shrinkWrap: true,
-                primary: false,
-                itemBuilder: (context, index) {
-                  return CasesCard(
-                    caseId: cd.cases[index].caseNumber,
-                    adv: cd.cases[index].adv,
-                    client: cd.cases[index].client,
-                    next: cd.cases[index].next,
-                    status: cd.cases[index].status,
-                    date: cd.cases[index].date,
-                    month: cd.cases[index].month,
-                  );
-                },
-                itemCount: cd.getCaseLength(),
-              ),
-            ],
-          ),
+        body: ListView.builder(
+          shrinkWrap: true,
+          primary: false,
+          itemBuilder: (context, index) {
+            return CasesCard(
+              caseId: cd.cases[index].caseNumber,
+              adv: cd.cases[index].adv,
+              client: cd.cases[index].client,
+              next: cd.cases[index].next,
+              status: cd.cases[index].status,
+              date: cd.cases[index].date,
+              month: cd.cases[index].month,
+            );
+          },
+          itemCount: cd.getCaseLength(),
         )
         // body: CasesCard(
         //   caseId: "0S/2019/456/145",

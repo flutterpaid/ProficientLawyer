@@ -99,8 +99,8 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text('Contacts'),
             onTap: () {
-              if (ModalRoute.of(context).settings.name != CasePage.id)
-                Navigator.pushReplacementNamed(context, CasePage.id);
+              if (ModalRoute.of(context).settings.name != ContactsPage.id)
+                Navigator.pushReplacementNamed(context, ContactsPage.id);
               else
                 Navigator.pop(context);
             },
