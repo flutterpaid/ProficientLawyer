@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lawyer/model/meeting_data.dart';
+import 'package:lawyer/ui/case_details_page.dart';
 import 'package:lawyer/ui/cases_page.dart';
 import 'package:lawyer/ui/contacts_page.dart';
 import 'package:lawyer/ui/home_page.dart';
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
           Schedules.id: (context) => Schedules(),
           FAQsPage.id: (context) => FAQsPage(),
           NotesPage.id: (context) => NotesPage(),
-          ContactsPage.id: (context) => ContactsPage()
+          ContactsPage.id: (context) => ContactsPage(),
+          CaseDetailsPage.id: (context) => CaseDetailsPage()
         },
       ),
     );

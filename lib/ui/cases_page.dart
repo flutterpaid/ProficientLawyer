@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lawyer/app_theme/app_colors.dart';
 import 'package:lawyer/app_theme/text_styles.dart';
+import 'package:lawyer/ui/case_details_page.dart';
 import 'package:lawyer/widgets/cases_card.dart';
 import 'package:lawyer/widgets/drawer.dart';
 import 'package:lawyer/widgets/floating_button.dart';
@@ -61,7 +62,10 @@ class CasePage extends StatelessWidget {
                   width: 130,
                   height: 37,
                   child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(
+                            context, CaseDetailsPage.id);
+                      },
                       child: Row(
                         children: [
                           Icon(
