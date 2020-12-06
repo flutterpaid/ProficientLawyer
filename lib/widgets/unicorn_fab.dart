@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lawyer/ui/case_details_page.dart';
 import 'package:lawyer/ui/cases_page.dart';
 import 'package:lawyer/widgets/add_schedule.dart';
 import 'package:unicorndial/unicorndial.dart';
@@ -26,7 +27,8 @@ class FAB extends StatelessWidget {
       mini: true,
       child: Icon(Icons.account_balance_sharp),
       onPressed: () {
-        Navigator.pushReplacementNamed(context, CasePage.id);
+        if (ModalRoute.of(context).settings.name != CaseDetailsPage.id)
+          Navigator.pushReplacementNamed(context, CaseDetailsPage.id);
       },
     )));
 
