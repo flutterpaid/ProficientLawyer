@@ -6,9 +6,11 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 import '../app_theme/text_styles.dart';
 
 Alert showAlertProceedings(context) {
+  double widthSc = MediaQuery.of(context).size.width;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   return Alert(
     style: AlertStyle(
+      buttonAreaPadding: EdgeInsets.only(bottom: 0, top: 40),
       alertPadding: EdgeInsets.all(0),
       animationType: AnimationType.grow,
       alertBorder: RoundedRectangleBorder(
@@ -115,7 +117,7 @@ Alert showAlertProceedings(context) {
     ),
     buttons: [
       DialogButton(
-        width: 340,
+        width: widthSc - 4,
         padding: EdgeInsets.all(0),
         radius: BorderRadius.circular(0),
         margin: EdgeInsets.all(0),

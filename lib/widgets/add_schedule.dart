@@ -7,8 +7,11 @@ import '../app_theme/text_styles.dart';
 
 Alert showAlert(context) {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  double widthSc = MediaQuery.of(context).size.width;
   return Alert(
     style: AlertStyle(
+      isCloseButton: false,
+      buttonAreaPadding: EdgeInsets.only(bottom: 0, top: 40),
       alertPadding: EdgeInsets.all(0),
       animationType: AnimationType.grow,
       alertBorder: RoundedRectangleBorder(
@@ -114,7 +117,7 @@ Alert showAlert(context) {
     ),
     buttons: [
       DialogButton(
-        width: 340,
+        width: widthSc - 4,
         padding: EdgeInsets.all(0),
         radius: BorderRadius.circular(0),
         margin: EdgeInsets.all(0),
