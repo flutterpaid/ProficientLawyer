@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lawyer/app_theme/text_styles.dart';
 import 'package:lawyer/model/case_data.dart';
 import 'package:lawyer/model/case_details_data.dart';
+import 'package:lawyer/widgets/add_proceedings.dart';
 import 'package:lawyer/widgets/blue_button.dart';
 import 'package:lawyer/widgets/case_details_card.dart';
 
@@ -112,6 +113,7 @@ class CaseDetailsPage1 extends StatelessWidget {
                     color: Colors.white,
                   ),
                   text: "Edit case details",
+                  onPressed: () {},
                 ),
                 BlueButton(
                   icon: Icon(
@@ -119,6 +121,7 @@ class CaseDetailsPage1 extends StatelessWidget {
                     color: Colors.white,
                   ),
                   text: "Connected Cases",
+                  onPressed: () {},
                 )
               ],
             ),
@@ -134,6 +137,7 @@ class CaseDetailsPage1 extends StatelessWidget {
                     color: Colors.white,
                   ),
                   text: "Upload Documents",
+                  onPressed: () {},
                 ),
                 BlueButton(
                   icon: Icon(
@@ -141,6 +145,9 @@ class CaseDetailsPage1 extends StatelessWidget {
                     color: Colors.white,
                   ),
                   text: "Add Proceedings",
+                  onPressed: () {
+                    showAlertProceedings(context).show();
+                  },
                 )
               ],
             ),

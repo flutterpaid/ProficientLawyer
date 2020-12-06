@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../ui/case_details_page.dart';
+
 class CaseTile extends StatelessWidget {
   final String caseNo;
   CaseTile({
@@ -13,7 +15,9 @@ class CaseTile extends StatelessWidget {
       margin: EdgeInsets.all(1.0),
       color: Colors.white,
       child: ListTile(
-        onTap: () {},
+        onTap: () {
+          Navigator.pushNamed(context, CaseDetailsPage.id);
+        },
         title: Text(
           caseNo,
         ),

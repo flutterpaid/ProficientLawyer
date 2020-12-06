@@ -4,7 +4,8 @@ import 'package:lawyer/app_theme/text_styles.dart';
 class BlueButton extends StatelessWidget {
   final String text;
   final Icon icon;
-  BlueButton({this.text, this.icon});
+  final Function onPressed;
+  BlueButton({this.text, this.icon, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class BlueButton extends StatelessWidget {
       width: 141,
       height: 37,
       child: FlatButton(
-          onPressed: () {},
+          onPressed: onPressed,
           child: Row(
             children: [
               icon,

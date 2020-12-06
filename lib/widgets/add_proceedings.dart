@@ -5,7 +5,7 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 
 import '../app_theme/text_styles.dart';
 
-Alert showAlert(context) {
+Alert showAlertProceedings(context) {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   return Alert(
     style: AlertStyle(
@@ -30,7 +30,7 @@ Alert showAlert(context) {
             Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  "SCHEDULE DETAILS",
+                  "ADD PROCEEDINGS",
                   style: AppTextStyles.textStyle(
                       fontType: FontType.semiBold,
                       color: Colors.grey,
@@ -121,11 +121,13 @@ Alert showAlert(context) {
         margin: EdgeInsets.all(0),
         child: Center(
             child: Text(
-          "Add Schedule",
+          "Add Proceeding",
           style: AppTextStyles.textStyle(
               fontType: FontType.bold, size: 30.f, color: Colors.white),
         )),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pop(context);
+        },
         color: Colors.blue,
       ),
     ],

@@ -124,7 +124,9 @@ Alert showAlert(context) {
           style: AppTextStyles.textStyle(
               fontType: FontType.bold, size: 30.f, color: Colors.white),
         )),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pop(context);
+        },
         color: Colors.blue,
       ),
     ],
