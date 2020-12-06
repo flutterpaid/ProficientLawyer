@@ -10,6 +10,7 @@ Alert showAlertProceedings(context) {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   return Alert(
     style: AlertStyle(
+      isCloseButton: false,
       buttonAreaPadding: EdgeInsets.only(bottom: 0, top: 40),
       alertPadding: EdgeInsets.all(0),
       animationType: AnimationType.grow,
