@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lawyer/app_theme/text_styles.dart';
 import 'package:lawyer/app_theme/app_colors.dart';
 import 'package:lawyer/app_theme/screen_util-extension.dart';
+import 'package:lawyer/ui/case_details_page.dart';
 
 class CasesCard extends StatelessWidget {
   final String caseId;
@@ -22,7 +23,9 @@ class CasesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onLongPress: () {},
+      onTap: () {
+        Navigator.pushReplacementNamed(context, CaseDetailsPage.id);
+      },
       title: Container(
         height: 170.h,
         child: Card(
