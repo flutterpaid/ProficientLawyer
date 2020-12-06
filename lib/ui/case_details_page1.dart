@@ -118,7 +118,7 @@ class CaseDetailsPage1 extends StatelessWidget {
                   ),
                   text: "Edit case details",
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, NewCase.id);
+                    Navigator.pushNamed(context, NewCase.id);
                   },
                 ),
                 BlueButton(
