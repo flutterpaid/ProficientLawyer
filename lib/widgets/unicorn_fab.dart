@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lawyer/ui/cases_page.dart';
-import 'package:lawyer/ui/schedule_page.dart';
+import 'package:lawyer/widgets/add_schedule.dart';
 import 'package:unicorndial/unicorndial.dart';
 
 class FAB extends StatelessWidget {
@@ -15,7 +15,7 @@ class FAB extends StatelessWidget {
       mini: true,
       child: Icon(Icons.access_alarms_sharp),
       onPressed: () {
-        Navigator.pushReplacementNamed(context, CasePage.id);
+        showAlert(context).show();
       },
     )));
 
@@ -26,7 +26,7 @@ class FAB extends StatelessWidget {
       mini: true,
       child: Icon(Icons.account_balance_sharp),
       onPressed: () {
-        Navigator.pushReplacementNamed(context, Schedules.id);
+        Navigator.pushReplacementNamed(context, CasePage.id);
       },
     )));
 
