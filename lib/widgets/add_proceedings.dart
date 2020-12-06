@@ -23,97 +23,94 @@ Alert showAlertProceedings(context) {
     ),
     title: "",
     context: context,
-    content: Container(
-      width: 1000,
-      child: Form(
-        key: _formKey,
-        child: Column(
-          children: [
-            SizedBox(),
-            Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "ADD PROCEEDINGS",
-                  style: AppTextStyles.textStyle(
-                      fontType: FontType.semiBold,
-                      color: Colors.grey,
-                      size: 30.f),
-                )),
-            Row(
-              children: [
-                Expanded(
-                  child: TextFormField(
-                    decoration: const InputDecoration(labelText: 'TITLE'),
-                    keyboardType: TextInputType.text,
-                    validator: (value) {
-                      if (value.length < 2) {
-                        return 'date not long enough';
-                      } else
-                        return null;
-                    },
-                  ),
+    content: Form(
+      key: _formKey,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(),
+          Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "ADD PROCEEDINGS",
+                style: AppTextStyles.textStyle(
+                    fontType: FontType.semiBold,
+                    color: Colors.grey,
+                    size: 30.f),
+              )),
+          Row(
+            children: [
+              Expanded(
+                child: TextFormField(
+                  decoration: const InputDecoration(labelText: 'TITLE'),
+                  keyboardType: TextInputType.text,
+                  validator: (value) {
+                    if (value.length < 2) {
+                      return 'date not long enough';
+                    } else
+                      return null;
+                  },
                 ),
-                SizedBox(
-                  width: 100.h,
+              ),
+              SizedBox(
+                width: 100.h,
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: const InputDecoration(labelText: 'DATE'),
+                  keyboardType: TextInputType.text,
+                  validator: (value) {
+                    if (value.length < 2) {
+                      return 'Name not long enough';
+                    } else
+                      return null;
+                  },
                 ),
-                Expanded(
-                  child: TextFormField(
-                    decoration: const InputDecoration(labelText: 'DATE'),
-                    keyboardType: TextInputType.text,
-                    validator: (value) {
-                      if (value.length < 2) {
-                        return 'Name not long enough';
-                      } else
-                        return null;
-                    },
-                  ),
+              ),
+            ],
+          ),
+          TextFormField(
+            decoration: const InputDecoration(labelText: 'REMARK'),
+            keyboardType: TextInputType.text,
+            validator: (value) {
+              if (value.length < 2) {
+                return 'Name not long enough';
+              } else
+                return null;
+            },
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: TextFormField(
+                  decoration: const InputDecoration(labelText: 'ADVOCATE'),
+                  keyboardType: TextInputType.text,
+                  validator: (value) {
+                    if (value.length < 2) {
+                      return 'Name not long enough';
+                    } else
+                      return null;
+                  },
                 ),
-              ],
-            ),
-            TextFormField(
-              decoration: const InputDecoration(labelText: 'REMARK'),
-              keyboardType: TextInputType.text,
-              validator: (value) {
-                if (value.length < 2) {
-                  return 'Name not long enough';
-                } else
-                  return null;
-              },
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: TextFormField(
-                    decoration: const InputDecoration(labelText: 'ADVOCATE'),
-                    keyboardType: TextInputType.text,
-                    validator: (value) {
-                      if (value.length < 2) {
-                        return 'Name not long enough';
-                      } else
-                        return null;
-                    },
-                  ),
+              ),
+              SizedBox(
+                width: 100.h,
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: const InputDecoration(labelText: 'ADJOURNED TO'),
+                  keyboardType: TextInputType.text,
+                  validator: (value) {
+                    if (value.length < 2) {
+                      return 'Name not long enough';
+                    } else
+                      return null;
+                  },
                 ),
-                SizedBox(
-                  width: 100.h,
-                ),
-                Expanded(
-                  child: TextFormField(
-                    decoration:
-                        const InputDecoration(labelText: 'ADJOURNED TO'),
-                    keyboardType: TextInputType.text,
-                    validator: (value) {
-                      if (value.length < 2) {
-                        return 'Name not long enough';
-                      } else
-                        return null;
-                    },
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
     ),
     buttons: [
