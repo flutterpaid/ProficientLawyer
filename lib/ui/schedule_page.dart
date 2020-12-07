@@ -40,11 +40,12 @@ class Schedules extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: AppColor.appbar,
           title: Center(
-              child: Text(
-            'Schedule',
-            style: AppTextStyles.textStyle(
-                color: Colors.white, fontType: FontType.medium, size: 24),
-          )),
+            child: Text(
+              'Schedule',
+              style: AppTextStyles.textStyle(
+                  color: Colors.white, fontType: FontType.medium, size: 24),
+            ),
+          ),
           bottom: InlineCalender(
             controller: _controller,
             locale: Locale('en_US'),

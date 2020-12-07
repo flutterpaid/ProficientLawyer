@@ -16,37 +16,11 @@ class ContactsPage extends StatelessWidget {
     ScreenUtil.init(context,
         designSize: Size(750, 1334), allowFontScaling: false);
     return Scaffold(
-      floatingActionButton: FAB(),
       drawer: MyDrawer(),
       appBar: AppBar(
-        backgroundColor: AppColor.appbar,
-        centerTitle: true,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 15),
-            child: CircleAvatar(
-              backgroundColor: Colors.white,
-              child: Icon(
-                Icons.person,
-                color: AppColor.profic_font,
-              ),
-            ),
-          )
-        ],
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "proficient",
-              style: AppTextStyles.s3(AppColor.profic_font),
-            ),
-            Text(
-              "LAWYER",
-              style: AppTextStyles.s3(Colors.white),
-            )
-          ],
-        ),
-      ),
+          backgroundColor: AppColor.appbar,
+          centerTitle: true,
+          title: Text("Contacts")),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

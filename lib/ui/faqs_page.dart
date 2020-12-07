@@ -17,30 +17,13 @@ class FAQsPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: AppColor.appbar,
           centerTitle: true,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 15),
-              child: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Icon(
-                  Icons.person,
-                  color: AppColor.profic_font,
-                ),
-              ),
-            )
-          ],
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "FAQs",
-                style: AppTextStyles.s3(Colors.white),
-              ),
-            ],
+          title: Text(
+            "FAQs",
+            style: AppTextStyles.s3(Colors.white),
           ),
         ),
         drawer: MyDrawer(),
-        floatingActionButton: FAB(),
+
         // floatingActionButton: UnicornDialer(
         //   parentHeroTag: null,
         //   parentButtonBackground: Colors.blue,

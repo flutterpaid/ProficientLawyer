@@ -9,6 +9,7 @@ import 'package:lawyer/model/case_data.dart';
 import 'package:lawyer/widgets/floating_button.dart';
 import 'package:lawyer/widgets/meeting_list.dart';
 import 'package:lawyer/app_theme/screen_util-extension.dart';
+import 'package:lawyer/widgets/pop_up_menu.dart';
 import 'package:lawyer/widgets/unicorn_fab.dart';
 import 'package:unicorndial/unicorndial.dart';
 
@@ -24,16 +25,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: AppColor.appbar,
         centerTitle: true,
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 15),
-            child: CircleAvatar(
-              backgroundColor: Colors.white,
-              child: Icon(
-                Icons.person,
-                color: AppColor.profic_font,
-              ),
-            ),
-          )
+          PopUp(),
         ],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -72,29 +64,7 @@ class HomePage extends StatelessWidget {
 //            color: Colors.white,
 //            child: Calender(),
 //          ),
-          Expanded(
-            flex: 5,
-            child: Container(
-              margin: EdgeInsets.only(bottom: 5),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Text(
-                      "TODAY'S CASES",
-                      style: AppTextStyles.textStyle(
-                        fontType: FontType.medium,
-                        size: 30.f,
-                        color: Colors.black38,
-                      ),
-                    ),
-                  ),
-                  Expanded(child: CaseList()),
-                ],
-              ),
-            ),
-          ),
+
           Expanded(
             flex: 5,
             child: Container(
