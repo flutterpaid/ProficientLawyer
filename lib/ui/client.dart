@@ -35,7 +35,6 @@ class ClientDetails extends StatelessWidget {
           ],
         ),
       ),
-      drawer: MyDrawer(),
       body: SingleChildScrollView(
         child: Consumer<ClientModel>(builder: (context, client, child) {
           return Column(

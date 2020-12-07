@@ -36,7 +36,6 @@ class OppositeParty extends StatelessWidget {
           ],
         ),
       ),
-      drawer: MyDrawer(),
       body: SingleChildScrollView(
         child: Consumer<OppositePartyModel>(builder: (context, client, child) {
           return Column(

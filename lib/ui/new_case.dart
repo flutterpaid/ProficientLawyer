@@ -38,7 +38,6 @@ class NewCase extends StatelessWidget {
           ],
         ),
       ),
-      drawer: MyDrawer(),
       body: SingleChildScrollView(
         child: Consumer<CaseModel>(builder: (context, cases, child) {
           return Column(

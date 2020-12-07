@@ -49,7 +49,6 @@ class ReviewAndSave extends StatelessWidget {
             ],
           ),
         ),
-        drawer: MyDrawer(),
         body: Consumer<ReviewSaveModel>(
           builder: (context, save, child) => TabBarView(children: [
             SingleChildScrollView(
