@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lawyer/app_theme/screen_util-extension.dart';
 import 'package:lawyer/app_theme/text_styles.dart';
+import 'package:lawyer/model/imported_files_data.dart';
+import 'package:provider/provider.dart';
 
 class CasesDetailsCard extends StatelessWidget {
   final String caseId;
@@ -21,6 +25,7 @@ class CasesDetailsCard extends StatelessWidget {
       this.month});
   @override
   Widget build(BuildContext context) {
+    final ImportedFiles imports = Provider.of<ImportedFiles>(context);
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
@@ -42,51 +47,45 @@ class CasesDetailsCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black)),
-                      child: Image.asset(
-                        "lib/images/file1.jpg",
-                        width: 50,
-                        height: 80,
-                      ),
-                    ),
+                    imports.listOfFiles.length != 0
+                        ? Container(
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              shrinkWrap: true,
+                              primary: false,
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  decoration: BoxDecoration(
+                                      border: Border.all(color: Colors.black)),
+                                  child: Image.file(
+                                    File(imports.listOfFiles[index]),
+                                    width: 50,
+                                    height: 80,
+                                  ),
+                                );
+                              },
+                              itemCount: imports.listOfFiles.length,
+                            ),
+                            height: 80,
+                          )
+                        : SizedBox(),
                     SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black)),
-                      child: Image.asset(
-                        "lib/images/file2.webp",
-                        width: 50,
-                        height: 80,
-                      ),
+                    GestureDetector(
+                      onTap: () {
+                        imports.addItem(imports.import());
+                      },
+                      child: Container(
+                          height: 80,
+                          width: 50,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey)),
+                          child: Icon(
+                            Icons.add,
+                            color: Colors.grey,
+                          )),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black)),
-                      child: Image.asset(
-                        "lib/images/file3.jpg",
-                        width: 50,
-                        height: 80,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                        height: 80,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey)),
-                        child: Icon(
-                          Icons.add,
-                          color: Colors.grey,
-                        ))
                   ],
                 ),
               ],

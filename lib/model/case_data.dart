@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
+
 import 'case_model.dart';
 
-class CaseData {
+class CaseData with ChangeNotifier {
   List<CaseDetails> cases = [
     CaseDetails(
         caseNumber: "OS/2014/1923/23",

@@ -7,14 +7,15 @@ import 'package:lawyer/ui/upload_fileview.dart';
 import 'package:lawyer/widgets/add_proceedings.dart';
 import 'package:lawyer/widgets/blue_button.dart';
 import 'package:lawyer/widgets/case_details_card.dart';
+import 'package:provider/provider.dart';
 
 import 'connected_casesview.dart';
 
 class CaseDetailsPage1 extends StatelessWidget {
-  CaseData cd = new CaseData();
-  CaseDetailsData cdd = new CaseDetailsData();
   @override
   Widget build(BuildContext context) {
+    final CaseData cd = Provider.of<CaseData>(context);
+    final CaseDetailsData cdd = Provider.of<CaseDetailsData>(context);
     return Container(
       child: SingleChildScrollView(
         child: Column(

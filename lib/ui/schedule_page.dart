@@ -7,8 +7,6 @@ import 'package:lawyer/widgets/drawer.dart';
 import 'package:lawyer/widgets/meeting_card.dart';
 import 'package:lawyer/widgets/unicorn_fab.dart';
 import 'package:provider/provider.dart';
-import 'package:unicorndial/unicorndial.dart';
-import 'package:lawyer/widgets/floating_button.dart';
 
 class Schedules extends StatelessWidget {
   static const String id = "Schedules";

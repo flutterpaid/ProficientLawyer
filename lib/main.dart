@@ -12,8 +12,11 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:lawyer/ui/faqs_page.dart';
 
+import 'model/case_data.dart';
+import 'model/case_details_data.dart';
 import 'model/casemodel.dart';
 import 'model/clientmodel.dart';
+import 'model/imported_files_data.dart';
 import 'model/injection.dart';
 import 'model/oppositeparty_model.dart';
 import 'model/reviewsavemodel.dart';
@@ -40,7 +43,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => GetIt.I<ClientModel>()),
         ChangeNotifierProvider(
             create: (context) => GetIt.I<OppositePartyModel>()),
-        ChangeNotifierProvider(create: (context) => GetIt.I<ReviewSaveModel>())
+        ChangeNotifierProvider(create: (context) => GetIt.I<ReviewSaveModel>()),
+        ChangeNotifierProvider(create: (context) => GetIt.I<ImportedFiles>()),
+        ChangeNotifierProvider(create: (context) => GetIt.I<CaseData>()),
+        ChangeNotifierProvider(create: (context) => GetIt.I<CaseDetailsData>())
       ],
       child: MaterialApp(
         home: HomePage(),
