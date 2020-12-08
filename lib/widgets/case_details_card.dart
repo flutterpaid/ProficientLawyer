@@ -54,13 +54,17 @@ class CasesDetailsCard extends StatelessWidget {
                               shrinkWrap: true,
                               primary: false,
                               itemBuilder: (context, index) {
-                                return Container(
-                                  decoration: BoxDecoration(
-                                      border: Border.all(color: Colors.black)),
-                                  child: Image.file(
-                                    File(imports.listOfFiles[index]),
-                                    width: 50,
-                                    height: 80,
+                                return Padding(
+                                  padding: EdgeInsets.only(right: 10),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: Colors.black)),
+                                    child: Image.file(
+                                      File(imports.listOfFiles[index]),
+                                      width: 50,
+                                      height: 80,
+                                    ),
                                   ),
                                 );
                               },
@@ -69,9 +73,6 @@ class CasesDetailsCard extends StatelessWidget {
                             height: 80,
                           )
                         : SizedBox(),
-                    SizedBox(
-                      width: 10,
-                    ),
                     GestureDetector(
                       onTap: () {
                         imports.addItem(imports.import());
