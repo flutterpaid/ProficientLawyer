@@ -12,6 +12,7 @@ class MeetingList extends StatelessWidget {
       itemBuilder: (context, index) {
         return MeetingTile(
           name: md.meetings[index].name,
+          time: md.meetings[index].time,
         );
       },
       itemCount: md.getLength(),
